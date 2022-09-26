@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<center>
+    <h2 style="background-color:rgb(236, 196, 123);">PASCASARJANA</h2>
+</center>
+
+<p></p>
+<center>
+    <img src="/static/images/pascasarjana.jpg" alt="pascasarjana" width="500px">
+</center>
+
+<p></p>
+<h3 style="background-color:rgb(236, 196, 123);">Sejarah</h3>
+<p style="font-family: 'times new roman'">{{ gbrumum }}</p>
+
+<h3 style="background-color:rgb(236, 196, 123);">Program Studi</h2>
+<p style="font-family: 'times new roman'">
+{% for judul in jdl %}
+    <li>{{ judul }}</li>
+{% endfor %}
+</p>
+
+{% endblock %}
